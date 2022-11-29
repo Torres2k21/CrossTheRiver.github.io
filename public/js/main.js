@@ -1,4 +1,3 @@
-
 // JS: persona3
 /*
     [[REQUEST]]
@@ -29,7 +28,7 @@
     btn-hawk
     btn-walnuts
 
-    ||Loss view||
+    ||Lost view||
     --Bg-Game-blur
     btn-try-now
     btn-home
@@ -43,15 +42,12 @@
 //[[Code]]
 
 //Initial variables
-let boatPlay = "btn-boat-player"
-let parrot = "btn-parrot"
-let hawk = "btn-hawk"
-let walnuts = "btn-walnuts"
+let boatPlay = "btn-boat-player";
+let parrot = "btn-parrot";
+let hawk = "btn-hawk";
+let walnuts = "btn-walnuts";
 
 //ids
-document.getElementById(idBtn).addEventListener("click", () => {
-
-});
+document.getElementById(idBtn).addEventListener("click", () => {});
 
 document.getElementById("").textContent = "//Algo";
-
