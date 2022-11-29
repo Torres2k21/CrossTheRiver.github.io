@@ -5,6 +5,7 @@
 }
 * {
   margin: 0px;
+  font-family: "Press Start 2P", cursive;
 }
 body {
   background: url(/public/img/fondo.png) no-repeat center center fixed;

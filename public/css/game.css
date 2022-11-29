@@ -1,5 +1,5 @@
 body {
-  background: url(/public/img/fondo.png) no-repeat center center fixed;
+  background: url(/public/img/river.webp) no-repeat center center fixed;
   background-size: 100% 100%;
 }
 #opacidad {
@@ -15,7 +15,7 @@ header {
   flex-wrap: wrap;
 
   font-family: "Press Start 2P", cursive;
-  font-size: 20px;
+  font-size: 25px;
   color: aliceblue;
 }
 header > .logo {
@@ -26,12 +26,25 @@ header > .logo {
   align-items: center;
   justify-content: center;
 }
-/* header >.time{
-    font-size: 20px; 
-} */
-/* header >.score{
-    font-size: 20px; 
-} */
+header > #time-game {
+  font-size: 20px;
+}
+header > #score-game {
+  font-size: 20px;
+}
+header > #pause-game {
+  cursor: pointer;
+  letter-spacing: -0.4em;
+  text-align: center;
+  padding-right: 10px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+#pause-game:hover{
+  /* font-size: 20px; */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 .btns {
   display: flex;
@@ -42,9 +55,6 @@ header > .logo {
   font-size: 20px;
 
   margin-top: 5vh;
-}
-#pause-game {
-  font-size: 25px;
 }
 
 @keyframes moveInBottom {
@@ -58,3 +68,28 @@ header > .logo {
     transform: translateY(0px);
   }
 }
+
+/* Objetos */
+.obejts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .Obj{
+  Cuando se ponga ecima que se aclare un poco
+} */
+#rancher {
+  width: 350px;
+}
+#hawk {
+  width: 120px;
+}
+/* #parrot{
+
+}
+#walnuts{
+
+}
+#Boat-player{
+
+} */
