@@ -39,15 +39,32 @@
     btn-home
 */
 
-//[[Code]]
-
+//      [[ Code ]]
 //Initial variables
-// let boatPlay = "btn-boat-player";
+let boatPlay = "btn-boat-player";
 // let parrot = "btn-parrot";
 // let hawk = "btn-hawk";
 // let walnuts = "btn-walnuts";
 
-//ids
-// document.getElementById(idBtn).addEventListener("click", () => {});
+// Objeto Boat
+const Boat = {
+  capacityMax: 2,
+  capacityNow: 1,
+  Rancher: true,
+  parrot: {
+    id: "btn-parrot",
+    state: false,
+  },
+  hawk: {
+    id: "btn-hawk",
+    state: false,
+  },
+  walnuts: {
+    id: "btn-walnuts",
+    state: false,
+  },
+};
 
-// document.getElementById("").textContent = "//Algo";
+
+// 
+console.log(Boat.parrot.id)
