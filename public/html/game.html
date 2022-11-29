@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/public/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="/public/css/game.css" rel="stylesheet" type="text/css" />
+    <title>CrossTheRiver | Game</title>
+    <link
+      rel="icon"
+      href="https://api.iconify.design/openmoji/person-rowing-boat-light-skin-tone.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main id="opacidad">
+      <header>
+        <img class="logo" src="/public/img/logo.png" />
+        <div id="time-game" class="time">Tiempo 00:00</div>
+        <div id="score-game" class="score">Puntaje: 00</div>
+        <div id="pause-game">||</div>
+      </header>
+
+      <!-- DELETE BEFORE  -->
+      <div class="nav">
+          <li><a href="/public/html/home.html">HOME</a></li>
+          <li><a href="/public/html/game.html">GAME</a></li>
+          <li><a href="/public/html/finally.html">FINALLY</a></li>
+      </div>
+
+      <section id="view-game" class="content-game">
+        <div class="btns">
+          <li><a id="btn-start" class="boton btn-animate">Start</a></li>
+          <!-- <li><a id="btn-end" class="boton btn-animate">End</a></li> -->
+        </div>
+      </section>
+    </main>
+    
+
+    <!-- Scripts -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/modals.js"></script>
+    <script src="/public/js/Timer.js"></script>
+    <script src="/public/js/gameView.js"></script>
+  </body>
+</html>

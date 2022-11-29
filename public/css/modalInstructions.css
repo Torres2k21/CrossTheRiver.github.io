@@ -1,0 +1,33 @@
+.modal-content{
+  border-radius: 20px;
+}
+.caja {
+  background: #d9d9d9;
+  padding: 4px;
+  border-radius: 20px;
+  width: 480px;
+  height: 380px;
+}
+.SubCaja {
+  padding: 15px;
+  margin: 3px;
+  background-image: url(/public/img/i.jpg);
+  border-radius: 20px;
+  width: 445px;
+  height: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 8px;
+  font-family: Cascadia Code;
+  font-size: 14.5px;
+}
+

@@ -1,0 +1,59 @@
+body{
+    background-image: url(/public/img/bginstructions.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.caja{
+    background:#D9D9D9;
+    padding:4px;
+    border-radius: 20px;
+    width: 480px;
+    height: 380px;
+    
+}
+.SubCaja{
+    padding: 15px; 
+    margin: 3px;
+    background-image: url(/public/img/i.jpg);
+    border-radius:20px;
+    width: 445px;
+    height: 345px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+.texto{
+    margin-top:130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-family:Cascadia Code;
+    font-size:14.5px;
+}
+.btn{
+    background-color:#D9D9D9;
+    padding: 15px;
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    border-radius: 5px;
+    font-weight:bold;
+    /*animaciones*/
+    border-color:#afb0b2;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    box-shadow: 0px 0px 0px 2px #b4c7ff;
+    text-shadow: 0px 1px 0px #4e4e4e;
+    background:linear-gradient(rgb(120, 146, 194), #476e9e);
+}
+
+.boton:hover{
+    background: linear-gradient(#476e9e, rgb(120, 146, 194));
+}
