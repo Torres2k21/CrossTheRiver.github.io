@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/public/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="/public/css/modalInstructions.css" rel="stylesheet" />
+    <link href="/public/css/modal.css" rel="stylesheet" />
     <title>CrossTheRiver | Home</title>
     <link
       rel="icon"
@@ -15,13 +17,15 @@
     <!-- DELETE BEFORE -->
     <div class="nav">
       <li><a href="/public/html/home.html">HOME</a></li>
-      <li><a href="/public/html/instructions.html">INSTRUCTIONS</a></li>
-      <li><a href="/public/html/lost.html">LOST</a></li>
+      <li><a href="/public/html/game.html">GAME</a></li>
       <li><a href="/public/html/finally.html">FINALLY</a></li>
     </div>
+
+    <!-- LOGO -->
     <div class="logo">
       <img class="logo" src="/public/img/logo.png" />
     </div>
+    <!-- GRANJERO -->
     <div class="granjero">
       <img class="img1" src="/public/img/granjero.png" />
     </div>
@@ -29,11 +33,15 @@
       <img class="img2" src="/public/img/HALCON.png" />
     </div>
     <div class="text-box">
-      <a href="#" class="btn btn-white btn- animate">click me</a>
+      <a href="#" id="btn-play-home" class="btn btn-white btn-animate"
+        >click me</a
+      >
     </div>
 
     <!-- Scripts -->
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <script src="/public/js/main.js"></script>
+    <script src="/public/js/modals.js"></script>
+    <script src="/public/js/homeView.js"></script>
   </body>
 </html>

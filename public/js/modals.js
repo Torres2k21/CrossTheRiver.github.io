@@ -54,11 +54,58 @@ const printModal = (content) => {
   modalContainerEl.addEventListener("click", (e) => {
     if (e.target === modalContainerEl) removeModal();
   });
-  document.getElementById("Btn-close-modal1").addEventListener("click", () => {
+  document.getElementById("Btn-modal-instructions").addEventListener("click", () => {
     removeModal();
   });
-  document.getElementById("Btn-close-modal2").addEventListener("click", () => {
-    removeModal();
-  });
+  // document.getElementById("Btn-close-modal2").addEventListener("click", () => {
+  //   removeModal();
+  // });
 };
 // --------------- END MODAL ---------------
+
+
+// MODALS
+// let modalInstrucctions = `
+//     <section class="caja">
+//         <div class="SubCaja">
+//             <p class="content-instruction texto">
+//                 Para cruzar el río se puede usar una barca.El granjero hará de
+//                 barquero: En la barca sólo cabe el granjero y, o una ave o la cesta de
+//                 nueces. También se sabe que, en ausencia del granjero: El halcón se
+//                 comería al loro si están ambos en la misma orilla. El loro se comería
+//                 las nueces si están ambos en la misma orilla.
+//             </p>
+//             <a id="Btn-modal-instructions" href="/public/html/game.html" class="boton">INICIAR</a>
+//         </div>
+//     </section>
+// `;
+
+// let modalLost = `
+//   <section class="caja">
+//   <div class="SubCaja">
+//     <div class="botones">
+//       <a href="#" class="boton">Jugar de Nuevo</a>
+//       <a href="#" class="boton">Página Principal </a>
+//     </div>
+//   </div>
+//   </section>
+// `;
+
+// let modalFinally = `
+//     <div class="final">
+//         <img class="img4" src="/public/img/final.jpg" />
+//         <div class="centrado">
+//             <h3>Resultado</h3>
+//         </div>
+//         <div class="centrado2">
+//             <h3>Tiempo</h3>
+//         </div>
+//         <div class="text-box">
+//             <b>
+//             <a href="#" class="btn btn-white btn- animate">
+//                 Volver
+//             </a>
+//             </b>
+//         </div>
+//     </div>;
+// `;

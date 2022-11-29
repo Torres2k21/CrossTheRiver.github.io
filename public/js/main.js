@@ -42,12 +42,12 @@
 //[[Code]]
 
 //Initial variables
-let boatPlay = "btn-boat-player";
-let parrot = "btn-parrot";
-let hawk = "btn-hawk";
-let walnuts = "btn-walnuts";
+// let boatPlay = "btn-boat-player";
+// let parrot = "btn-parrot";
+// let hawk = "btn-hawk";
+// let walnuts = "btn-walnuts";
 
 //ids
-document.getElementById(idBtn).addEventListener("click", () => {});
+// document.getElementById(idBtn).addEventListener("click", () => {});
 
-document.getElementById("").textContent = "//Algo";
+// document.getElementById("").textContent = "//Algo";
