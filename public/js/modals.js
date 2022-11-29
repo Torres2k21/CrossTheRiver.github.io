@@ -54,11 +54,11 @@ const printModal = (content) => {
   modalContainerEl.addEventListener("click", (e) => {
     if (e.target === modalContainerEl) removeModal();
   });
-  document.getElementById("Btn-close-modal1").addEventListener("click", () => {
+  document.getElementById("Btn-modal-instructions").addEventListener("click", () => {
     removeModal();
   });
-  document.getElementById("Btn-close-modal2").addEventListener("click", () => {
-    removeModal();
-  });
+  // document.getElementById("Btn-close-modal2").addEventListener("click", () => {
+  //   removeModal();
+  // });
 };
 // --------------- END MODAL ---------------
