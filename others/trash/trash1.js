@@ -329,3 +329,8 @@ const ejecutarOperacion = (arryOpera) => {
 //  ['-0.5', '-', '-0.1'] => -0.4
 //  ['-0.5', '-', '-0.4'] => -0.999998 =>> -0.1
 //  Podemos redondearlo 0.9998 Math.round10()
+
+
+//ids
+// document.getElementById(idBtn).addEventListener("click", () => {});
+// document.getElementById("").textContent = "//Algo";

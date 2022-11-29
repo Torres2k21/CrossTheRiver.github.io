@@ -1,0 +1,15 @@
+/* home */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn-play-home {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#btn-play-home {
+  margin-top: 8vh;
+}

@@ -17,7 +17,6 @@ let modalInstrucctions = `
 `;
 
 // OnClick => btnPlay
-
 document.getElementById(btnPlay).addEventListener("click", () => {
   printModal(modalInstrucctions);
 });

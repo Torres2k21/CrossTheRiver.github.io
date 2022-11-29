@@ -1,127 +1,139 @@
-:root{
-    /* --bg-primario-low:  s; */
-    --bg-opacity-modal: #1311118e;
-    /* --color-letra-modal: asdsa; */
+:root {
+  /* --bg-game: /public/img/fondo.png; */
+  --bg-opacity-modal: #1311118e;
+  /* --color-letra-modal: asdsa; */
 }
-*{
-    margin: 0px;
+* {
+  margin: 0px;
+  font-family: "Press Start 2P", cursive;
 }
-body, html {
-    background-repeat: no-repeat;
-    background: url(/public/img/fondo.png) no-repeat center center fixed;
-    background-size: 100% 100%;
+body {
+  background: url(/public/img/fondo.png) no-repeat center center fixed;
+  background-size: 100%;
 }
-.logo{   
-    height: 320px;
-    width: 320px;
-    margin-top: 0px;
-    margin-left: 330px;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
+/* NAV DELETE BEFORE */
+.nav {
+  display: fixed;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #000;
+  border-radius: 10px;
+  list-style: square;
+  padding: 20px;
+  color: floralwhite;
 }
-.boton {
-    background-color: #d9d9d9;
-    padding: 15px;
-    margin: 10px;
-    text-decoration: none;
-    color: rgb(253, 253, 253);
-    border-radius: 5px;
-    font-weight: bold;
-    /*animaciones*/
-    border-color: #afb0b2;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 0px 0px 2px #b4c7ff;
-    text-shadow: 0px 1px 0px #4e4e4e;
-    background: linear-gradient(rgb(120, 146, 194), #476e9e);
-  }
-  
-  .boton:hover {
-    background: linear-gradient(#476e9e, rgb(120, 146, 194));
-  }
-.img1{
-    float: left; 
-    margin-left: 30px;
-    margin-top: 20px;
-    width: 350px;
+.nav > li > a {
+  font-size: 20px;
+  color: floralwhite;
+  text-decoration: none;
 }
-.img2{
-    float: left; 
-    margin-left:-80px;
-    margin-top: 180px;
-    width: 120px;
+/* Objetos */
+.obejts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.text-box {
-    margin-left: 44vw;
-	margin-top: 42vh;
+#rancher {
+  width: 350px;
+}
+#hawk {
+  width: 120px;
+}
+/* #parrot{
+
+}
+#walnuts{
+
+}
+#boat{
+
+} */
+
+.boton,
+.btn {
+  background-color: #d9d9d9;
+  padding: 15px;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(253, 253, 253);
+  border-radius: 5px;
+  font-weight: bold;
+
+  /*animaciones*/
+  border-color: #afb0b2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 2px #b4c7ff;
+  text-shadow: 0px 1px 0px #4e4e4e;
+  background: linear-gradient(rgb(120, 146, 194), #476e9e);
+}
+
+.boton:hover,
+.btn:hover {
+  background: linear-gradient(#476e9e, rgb(120, 146, 194));
 }
 
 .btn:link,
 .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: all .2s;
-    position: absolute;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
-    background-color: #E7DA67;
-    color: #777;
+  background-color: #e7da67;
+  color: #777;
 }
 
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
+/* .btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+} */
 
 .btn-white::after {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
 .btn-animated {
-    animation: moveInBottom 5s ease-out;
-    animation-fill-mode: backwards;
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
 }
 
 @keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

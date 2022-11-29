@@ -1,20 +1,22 @@
-.modal-content{
-  border-radius: 20px;
+.modal-content {
+  border-radius: 10px;
 }
 .caja {
   background: #d9d9d9;
   padding: 4px;
   border-radius: 20px;
   width: 480px;
-  height: 380px;
+  height: 480px;
 }
 .SubCaja {
   padding: 15px;
   margin: 3px;
   background-image: url(/public/img/i.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
   border-radius: 20px;
   width: 445px;
-  height: 345px;
+  height: 445px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +24,7 @@
 }
 
 .texto {
+  margin-top: 90px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -30,4 +33,3 @@
   font-family: Cascadia Code;
   font-size: 14.5px;
 }
-
