@@ -17,7 +17,7 @@ let modalInstrucctions = `
 `;
 
 // OnClick => btnPlay
+
 document.getElementById(btnPlay).addEventListener("click", () => {
-//   console.log("Estoy Vivo soy el btnPlay");
   printModal(modalInstrucctions);
 });
