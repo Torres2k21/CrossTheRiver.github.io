@@ -55,11 +55,13 @@ body {
   background-color: #d9d9d9;
   padding: 15px;
   margin: 10px;
+  position: -webkit-sticky;
+  position: sticky;
   text-decoration: none;
   color: rgb(253, 253, 253);
   border-radius: 5px;
   font-weight: bold;
-
+  position: absolute;
   /*animaciones*/
   border-color: #afb0b2;
   border-radius: 10px;
@@ -77,8 +79,10 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 15px 30px;
   display: inline-block;
+  position: -webkit-sticky;
+  position: sticky;
   border-radius: 100px;
   transition: all 0.2s;
   position: absolute;
