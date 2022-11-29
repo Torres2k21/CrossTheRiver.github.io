@@ -1,3 +1,6 @@
+.modal-content{
+  border-radius: 20px;
+}
 .caja {
   background: #d9d9d9;
   padding: 4px;
@@ -19,33 +22,12 @@
 }
 
 .texto {
-  margin-top: 130px;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   padding: 8px;
   font-family: Cascadia Code;
   font-size: 14.5px;
 }
-.boton {
-  background-color: #d9d9d9;
-  padding: 15px;
-  margin: 10px;
-  text-decoration: none;
-  color: rgb(253, 253, 253);
-  border-radius: 5px;
-  font-weight: bold;
-  /*animaciones*/
-  border-color: #afb0b2;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 0px 0px 0px 2px #b4c7ff;
-  text-shadow: 0px 1px 0px #4e4e4e;
-  background: linear-gradient(rgb(120, 146, 194), #476e9e);
-}
 
-.boton:hover {
-  background: linear-gradient(#476e9e, rgb(120, 146, 194));
-}
