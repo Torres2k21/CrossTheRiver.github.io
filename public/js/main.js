@@ -42,12 +42,17 @@
 //[[Code]]
 
 //Initial variables
-// let boatPlay = "btn-boat-player";
-// let parrot = "btn-parrot";
-// let hawk = "btn-hawk";
-// let walnuts = "btn-walnuts";
+let boatPlay = "btn-boat-player";
+let parrot = "btn-parrot";
+let hawk = "btn-hawk";
+let walnuts = "btn-walnuts";
 
-//ids
-// document.getElementById(idBtn).addEventListener("click", () => {});
 
-// document.getElementById("").textContent = "//Algo";
+const Boat = {
+    "capacityMax": 2,
+    "capacityNow": 1,
+    "Rancher": true,
+    "parrot" : false,
+    "hawk": false,
+    "walnuts": false
+}
