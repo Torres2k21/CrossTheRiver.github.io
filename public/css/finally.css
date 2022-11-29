@@ -17,14 +17,15 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .img4 {
   position: fixed;
-  height: 350px;
-  width: 350px;
+  height: 300px;
+  width: 300px;
   background: rgba(0, 0, 0, 0.3);
   overflow: auto;
   border-radius: 20px;
-  border: 10px solid rgb(255, 255, 255);
+  border: 6px solid rgb(255, 255, 255);
 }
 .img4 {
   position: absolute;
@@ -35,19 +36,20 @@ body {
   /*max-height: 100%;*/
 }
 
-.centrado {
+.centrado{
   position: absolute;
-  top: 55%;
-  left: 49%;
-  font-family: "Cascadia Code";
+  top:53%;
+  left:53%;
   transform: translate(-50%, -50%);
 }
-.centrado2 {
+h2{
   position: absolute;
-  top: 55%;
-  left: 58%;
-  font-family: "Cascadia Code";
-  transform: translate(-50%, -50%);
+  font-size: 11px;
+  word-spacing: 1.7em;
+  top:150%;
+  left:34%;
+  color: #f7f7f7;
+  transform: translate(-45%, -45%);
 }
 .btn:link,
 .btn:visited {
@@ -56,12 +58,13 @@ body {
   border-radius: 100px;
   transition: all 0.2s;
   position: absolute;
-  bottom: 165px;
+  bottom: 185px;
   font-family: "Cascadia Code";
-  right: 580px;
+  right: 570px;
   background-color: #f8f1f2;
   color: rgb(14, 12, 12);
-  padding: 1em 1.5em;
+  padding: 1em 1.2em;
+  
 }
 
 .btn:hover {
@@ -82,8 +85,8 @@ body {
 .btn::after {
   content: "";
   display: inline-block;
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   border-radius: 100px;
   position: absolute;
   top: 0;
