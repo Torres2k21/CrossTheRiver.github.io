@@ -24,6 +24,10 @@
       <li><a href="/public/html/home.html">HOME</a></li>
       <li><a href="/public/html/game.html">GAME</a></li>
       <li><a href="/public/html/finally.html">FINALLY</a></li>
+      <div class="btns">
+        <li><a id="btn-start" class="boton btn-animate">Start</a></li>
+        <!-- <li><a id="btn-end" class="boton btn-animate">End</a></li> -->
+      </div>
     </div>
 
     <main id="opacidad">
@@ -31,30 +35,25 @@
         <a href="/public/html/home.html"
           ><img class="logo" src="/public/img/logo.png"
         /></a>
-        <div id="time-game" class="time">Tiempo 00:00</div>
-        <div id="score-game" class="score">Puntaje: 00</div>
+        <div id="time-game" class="btn-header">Tiempo 00:00</div>
+        <div id="score-game" class="btn-header">Puntaje: 00</div>
         <div id="pause-game">||</div>
       </header>
 
-      <section class="game-view">
+      <section id="view-game" class="content-game">
         <section class="obejts">
-          <!-- Rancher -->
-          <img id="Rancher" src="/public/img/Objrancher.png" />
+          <!-- BoatRancher -->
+          <img id="Boat-player" class="Obj" src="/public/img/ObjboatRancher.png" />
           <!-- hawk -->
-          <img id="hawk" src="/public/img/Objhawk.png" />
+          <img id="hawk" class="Obj" src="/public/img/Objhawk.png" />
           <!-- parrot -->
-          <img id="parrot" src="/public/img/parrot.png" />
+          <img id="parrot" class="Obj" src="/public/img/parrot.png" />
           <!-- walnuts -->
-          <img id="walnuts" src="/public/img/walnuts.png" />
+          <img id="walnuts" class="Obj" src="/public/img/walnuts.png" />
         </section>
       </section>
 
-      <section id="view-game" class="content-game">
-        <div class="btns">
-          <li><a id="btn-start" class="boton btn-animate">Start</a></li>
-          <!-- <li><a id="btn-end" class="boton btn-animate">End</a></li> -->
-        </div>
-      </section>
+      
     </main>
 
     <!-- Scripts -->
