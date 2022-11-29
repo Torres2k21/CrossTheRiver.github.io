@@ -39,20 +39,32 @@
     btn-home
 */
 
-//[[Code]]
-
+//      [[ Code ]]
 //Initial variables
 let boatPlay = "btn-boat-player";
-let parrot = "btn-parrot";
-let hawk = "btn-hawk";
-let walnuts = "btn-walnuts";
+// let parrot = "btn-parrot";
+// let hawk = "btn-hawk";
+// let walnuts = "btn-walnuts";
 
-
+// Objeto Boat
 const Boat = {
-    "capacityMax": 2,
-    "capacityNow": 1,
-    "Rancher": true,
-    "parrot" : false,
-    "hawk": false,
-    "walnuts": false
-}
+  capacityMax: 2,
+  capacityNow: 1,
+  Rancher: true,
+  parrot: {
+    id: "btn-parrot",
+    state: false,
+  },
+  hawk: {
+    id: "btn-hawk",
+    state: false,
+  },
+  walnuts: {
+    id: "btn-walnuts",
+    state: false,
+  },
+};
+
+
+// 
+console.log(Boat.parrot.id)

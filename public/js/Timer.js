@@ -64,11 +64,11 @@ var doError = function () {
 };
 
 // (The third argument is optional)
-var ticker = new AdjustingInterval(doWork, 1000, doError);
+var game = new AdjustingInterval(doWork, 1000, doError);
 
 // You can start or stop your timer at will
-
-// ticker.stop();
+// game.stop
+// game.stop();
 
 // You can also change the interval while it's in progress
-ticker.interval = 1000;
+game.interval = 1000;
