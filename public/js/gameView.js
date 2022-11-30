@@ -46,7 +46,8 @@ let boatPlayer = document.getElementById(Boat.id);
 boatPlayer.addEventListener("click", () => {
   moveBoatPlayer(boatPlayer, Boat, Boat.copilot);
   isError();
-  console.log(`Position ${Boat.id}: ${Boat.position}`);
+  // console.log(`Position ${Boat.id}: ${Boat.position}`);
+  console.log(characters);
 });
 //-------------------- Varibles Objects END --------------------
 
@@ -103,6 +104,19 @@ const moveBoatPlayer = (BoatHtml, Boat, objPropertyHtml) => {
     if (Boat.capacityNow == Boat.capacityMax) {
       BoatHtml.style.transform = "translateX(0.1vw)";
       objPropertyHtml.style.transform = `translateX(${timeSet.back}vw)`;
+      // switch (objPropertyHtml.id) {
+      //   case characters.parrot.id:
+      //     characters.parrot.satate = true
+      //     break;
+
+      //   case characters.hawk.id:
+      //     characters.hawk.satate = true
+      //     break;
+
+      //   case characters.walnuts.id:
+      //     characters.walnuts.satate = true
+      //     break;
+      // }
     }
     if (Boat.capacityNow < Boat.capacityMax) {
       BoatHtml.style.transform = "translateX(0.1vw)";
@@ -157,12 +171,14 @@ const moveObject = (ObjectHtml, objProperty) => {
     }
     if (Boat.capacityNow < Boat.capacityMax) {
       ObjectHtml.style.transform = `translateX(${timeSet.back1}vw)`;
+      objProperty.position = 0;
       Boat.capacityNow = 2;
+      // console.log("Hola mundo")
     }
     Boat.capacityNow--;
   }
+  isVictory();
   updateBoat(objProperty);
-  isError();
 };
 
 const updateBoat = (objProperty) => {
@@ -185,14 +201,23 @@ const updateBoat = (objProperty) => {
 const isError = () => {
   if (
     (characters.walnuts.position == characters.parrot.position &&
-      (characters.walnuts.position != characters.hawk.position || (characters.hawk.state==true && Boat.position!=characters.walnuts.position))) ||
+      !characters.hawk.state &&
+      (characters.walnuts.position != characters.hawk.position ||
+        (characters.hawk.state == true &&
+          Boat.position != characters.walnuts.position))) ||
     (characters.hawk.position == characters.parrot.position &&
-      (characters.hawk.position != characters.walnuts.position || (characters.walnuts.state==true && Boat.position!=characters.hawk.position)))
+      characters.parrot.state == characters.hawk.state &&
+      (characters.hawk.position != characters.walnuts.position ||
+        (characters.walnuts.state == true &&
+          Boat.position != characters.hawk.position)))
   ) {
     console.warn("Perdiste");
     game.stop();
-    printModal(modalLost);
+    // printModal(modalLost);
   }
+};
+
+const isVictory = () => {
   if (
     characters.parrot.position == 1 &&
     characters.hawk.position == 1 &&
@@ -200,7 +225,6 @@ const isError = () => {
   ) {
     console.log("Ganaste");
     game.stop();
-    printModal(modalFinally);
+    // printModal(modalFinally);
   }
 };
-//OBJ SE MUEVE CUANDO ESTA EN POSITION = 0 HASTA POSITION = 1
