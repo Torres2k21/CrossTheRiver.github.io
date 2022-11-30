@@ -1,8 +1,8 @@
 //      [[ GAME ]]
-console.group();
-console.log(`CapacityNow: ${Boat.capacityNow}`);
-console.log(`Position: ${Boat.position}`);
-console.groupEnd();
+// console.group();
+// console.log(`CapacityNow: ${Boat.capacityNow}`);
+// console.log(`Position: ${Boat.position}`);
+// console.groupEnd();
 
 // btnCounters DELETE BEFORE
 document.getElementById("btn-start").addEventListener("click", () => {
@@ -75,13 +75,13 @@ const moveBoatPlayer = (BoatHtml, Boat, objPropertyHtml) => {
     }
     if (Boat.capacityNow < Boat.capacityMax) {
       BoatHtml.style.transform = "translateX(0.1vw)";
-    //   objPropertyHtml.style.transform = `translateX(${timeSet.back}vw)`;
+      //   objPropertyHtml.style.transform = `translateX(${timeSet.back}vw)`;
     }
     BoatHtml.style.transform = "translateX(0.1vw)";
   }
   if (Boat.position === 0) Boat.position = 1;
   else Boat.position = 0;
-  actualizarObj(objPropertyHtml);
+  //   actualizarObj(objPropertyHtml);
 };
 
 // moverObjeto => (parrot, hawk, walnuts)
@@ -121,11 +121,11 @@ const moveObject = (ObjectHtml, objProperty) => {
   }
   if (Boat.position == 1) {
     if (Boat.capacityNow == Boat.capacityMax) {
-       ObjectHtml.style.transform = `translateX(${timeSet.go1}vw)`;
+      ObjectHtml.style.transform = `translateX(${timeSet.go1}vw)`;
     }
     if (Boat.capacityNow < Boat.capacityMax) {
-        ObjectHtml.style.transform = `translateX(${timeSet.back1}vw)`;
-        Boat.capacityNow = 2;
+      ObjectHtml.style.transform = `translateX(${timeSet.back1}vw)`;
+      Boat.capacityNow = 2;
     }
     Boat.capacityNow--;
   }
@@ -137,17 +137,23 @@ const actualizarObj = (objProperty) => {
     Boat.copilot = objProperty.Element;
     Boat.capacityNow = 2;
     objProperty.state = true;
-    // DENEGAR QUE ENTREN MÁS
-    console.log(`State - ${objProperty.id}: ${objProperty.state}`);
-    console.log(`Copilot - ${Boat.copilot}: ${objProperty.id}`);
+    // console.log(`State - ${objProperty.id}: ${objProperty.state}`);
+    // console.log(`Copilot - ${Boat.copilot}: ${objProperty.id}`);
   } else {
     Boat.copilot = "";
     objProperty.state = false;
-    console.log(`State - ${objProperty.id}: ${objProperty.state}`);
-    console.log(`Copilot - ${Boat.copilot}: ${objProperty.id}`);
+    // console.log(`State - ${objProperty.id}: ${objProperty.state}`);
+    // console.log(`Copilot - ${Boat.copilot}: ${objProperty.id}`);
   }
+  // REGLAS DEL JUEGO
+//   if (
+//     (characters.hawk.position == characters.parrot.position &&
+//       characters.hawk.position != characters.walnuts.position) ||
+//     (characters.walnuts.position == characters.parrot.position &&
+//       characters.parrot.position != characters.hawk.position)
+//   ) {
+//     console.log("Perdiste");
+//   }
+// MAX CTM BRO, MEJORA ESTA WBB PLS :D
 };
 //-------------------- functions moves END--------------------
-
-// console.log(`CapacityNow: ${objJSON.capacityNow}`);
-// console.log(`Position ${objJSON.id}: ${objJSON.position}`);

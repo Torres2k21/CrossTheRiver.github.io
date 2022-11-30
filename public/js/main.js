@@ -92,16 +92,6 @@ characters.hawk.Element = document.getElementById(characters.hawk.id);
 characters.parrot.Element = document.getElementById(characters.parrot.id);
 characters.walnuts.Element = document.getElementById(characters.walnuts.id);
 
-// REGLAS DEL JUEGO
-if (
-  (characters.hawk.position == characters.parrot.position &&
-    characters.hawk.position != characters.walnuts.position) ||
-  (characters.walnuts.position == characters.parrot.position &&
-    characters.parrot.position != characters.hawk.position)
-) {
-  console.log("Perdiste");
-}
-
 /*
   hawk - parrot - walnuts => State 0
 
@@ -109,15 +99,3 @@ if (
   parrot - walnuts => State Lost
 
 */
-
-
-// if (Boat.position == 0) {
-//   BoatHtml.style.transform = "translateX(-40vw)";
-//   objPropertyHtml.style.transform = `translateX(${timeSet.go}vw)`;
-// }
-// if (Boat.position == 1) {
-//   BoatHtml.style.transform = "translateX(0.1vw)";
-//   objPropertyHtml.style.transform = `translateX(${timeSet.back}vw)`;
-// }
-// if (Boat.position === 0) Boat.position = 1;
-// else Boat.position = 0;
