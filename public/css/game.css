@@ -93,16 +93,14 @@ header > #pause-game {
 } */
 
 #hawk {
-  height: 95px;
-  width: 120px;
+  height: 85px;
+  width: 50px;
 }
 #parrot {
-  background: #000;
   height: 80px;
-  width: 80px;
+  width: 100px;
 }
 #walnuts {
-  background: #000;
   height: 80px;
   width: 80px;
 }

@@ -19,49 +19,86 @@ document.getElementById("pause-game").addEventListener("click", () => {
 // Variable => Boat-player
 let boatPlayer = document.getElementById(Boat.id);
 boatPlayer.addEventListener("click", () => {
-  //boatPlayer.style.transform = "matrix(-1, 0, 0, 1, 0, 0)";
   moveBoatPlayer(boatPlayer, Boat);
   if (Boat.position === 0) Boat.position = 1;
   else Boat.position = 0;
-  console.log(`Position: ${Boat.position}`);
-  // actulizarBoat(Boat);
+  console.log(`Position ${Boat.id}: ${Boat.position}`);
 });
 
+//-------------------- Varibles Objects START --------------------
 // Variable => parrot
 let parrot = document.getElementById(Boat.parrot.id);
 parrot.addEventListener("click", () => {
-  actulizarBoat(Boat, Boat.parrot);
+  moveObject(parrot, Boat.parrot);
+  actualizarObj(Boat.parrot);
 });
 
 // Variable => hawk
 let hawk = document.getElementById(Boat.hawk.id);
 hawk.addEventListener("click", () => {
-  actulizarBoat(Boat, Boat.hawk);
+  moveObject(hawk, Boat.hawk);
+  actualizarObj(Boat.hawk);
 });
 
 // Variable => walnuts
 let walnuts = document.getElementById(Boat.walnuts.id);
 walnuts.addEventListener("click", () => {
-  actulizarBoat(Boat, Boat.walnuts);
+  moveObject(walnuts, Boat.walnuts);
+  actualizarObj(Boat.walnuts);
 });
+//-------------------- Varibles Objects END --------------------
 
-// functions move
+//-------------------- functions moves START--------------------
 /**
  * moveBoatPlayer()
  * --Movimiento de todo el barco
  *
- * @param {String} BoatHtml   Id del HTML del BoatPlayer
- * @param {Object}  Boat      Objeto con toda la información
+ * @param {String}  BoatHtml   Id del HTML del "BoatPlayer"
+ * @param {Object}  Boat       Objeto con toda la información
+ * @param {Element} Object     Id del HTML del "Object"
  *
  */
-const moveBoatPlayer = (BoatHtml, Boat) => {
-  if (Boat.position == 0) BoatHtml.style.transform = "translateX(-40vw)";
-  if (Boat.position == 1) BoatHtml.style.transform = "translateX(2vw)";
+const moveBoatPlayer = (BoatHtml, Boat, objProperty) => {
+  if (Boat.position == 0) {
+    BoatHtml.style.transform = "translateX(-40vw)";
+    // objProperty.style.transform = "translateX(-40vw)";
+  }
+  if (Boat.position == 1) {
+    BoatHtml.style.transform = "translateX(0.1vw)";
+    // objProperty.style.transform = "translateX(2vw)";
+  }
 };
 
-const moveObect = () => {
-    // Object ,position
-}
+// moverObjeto => (parrot, hawk, walnuts)
+const moveObject = (Object, objProperty) => {
+  let pichula = {
+    ida: "",
+    vuelta: "",
+  };
+  switch (objProperty.id) {
+    case "parrot":
+      pichula.ida = "-15.7";
+      pichula.vuelta = "0.1";
+      break;
+
+    case "hawk":
+      pichula.ida = "-12.4";
+      pichula.vuelta = "0.1";
+      break;
+
+    case "walnuts":
+      pichula.ida = "-18.4";
+      pichula.vuelta = "0.1";
+      break;
+  }
+
+  if (objProperty.state == false) {
+    Object.style.transform = `translateX(${pichula.ida}vw)`;
+  }
+  if (objProperty.state == true) {
+    Object.style.transform = `translateX(${pichula.vuelta}vw)`;
+  }
+};
 
 /**
  * actualizarBoat()
@@ -71,16 +108,19 @@ const moveObect = () => {
  * @param {Property} objProperty    Propiedad del Objeto "Boat"
  *
  */
-const actulizarBoat = (objJSON, objProperty) => {
+const actulizarBoat = (objJSON) => {
   if (objJSON.capacityNow >= objJSON.capacityMax) {
     objJSON.capacityNow--;
     console.log(`CapacityNow: ${objJSON.capacityNow}`);
-    console.log(`Position: ${objJSON.position}`);
+    console.log(`Position ${objJSON.id}: ${objJSON.position}`);
   } else if (objJSON.capacityNow == 1) {
     objJSON.capacityNow++;
     console.log(`CapacityNow: ${objJSON.capacityNow}`);
-    console.log(`Position: ${objJSON.position}`);
+    console.log(`Position ${objJSON.id}: ${objJSON.position}`);
   }
+};
+
+const actualizarObj = (objProperty) => {
   if (objProperty.state == false) {
     objProperty.state = true;
     console.log(`State - ${objProperty.id}: ${objProperty.state}`);
@@ -89,6 +129,7 @@ const actulizarBoat = (objJSON, objProperty) => {
     console.log(`State - ${objProperty.id}: ${objProperty.state}`);
   }
 };
+//-------------------- functions moves END--------------------
 
 // [[  TRASH  ]]
 
@@ -112,3 +153,5 @@ const actulizarBoat = (objJSON, objProperty) => {
 //     state: false,
 //   },
 // };
+
+//boatPlayer.style.transform = "matrix(-1, 0, 0, 1, 0, 0)";

@@ -67,6 +67,15 @@ const Boat = {
   },
 };
 
+// REGLAS DEL JUEGO
+// if(Boat.hawk.position == Boat.parrot.position){
+//   console.log("Perdiste");
+// }
 
-// 
-console.log(Boat.parrot.id)
+/*
+  hawk - parrot - walnuts => State 0
+
+  hawk - parrot => State Lost
+  parrot - walnuts => State Lost
+
+*/
