@@ -44,6 +44,14 @@ header > #pause-game {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+#btn-start{
+  /* display: none; */
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 
 .btns {
   display: flex;
