@@ -40,16 +40,38 @@
 */
 
 //      [[ Code ]]
-//Initial variables
-let boatPlay = "btn-boat-player";
-
 // Objeto Boat
+// const Boat = {
+//   id: "Boat-player",
+//   position: 0,
+//   capacityMax: 2,
+//   capacityNow: 1,
+//   copilot: "ARTUROGAY",
+//   parrot: {
+//     id: "parrot",
+//     position: 0,
+//     state: false,
+//   },
+//   hawk: {
+//     id: "hawk",
+//     position: 0,
+//     state: false,
+//   },
+//   walnuts: {
+//     id: "walnuts",
+//     position: 0,
+//     state: false,
+//   },
+// };
 const Boat = {
   id: "Boat-player",
   position: 0,
   capacityMax: 2,
   capacityNow: 1,
-  Rancher: true,
+  copilot: "JsonKBrO",
+};
+
+const characters = {
   parrot: {
     id: "parrot",
     position: 0,
@@ -66,11 +88,19 @@ const Boat = {
     state: false,
   },
 };
+characters.hawk.Element = document.getElementById(characters.hawk.id);
+characters.parrot.Element = document.getElementById(characters.parrot.id);
+characters.walnuts.Element = document.getElementById(characters.walnuts.id);
 
 // REGLAS DEL JUEGO
-// if(Boat.hawk.position == Boat.parrot.position){
-//   console.log("Perdiste");
-// }
+if (
+  (characters.hawk.position == characters.parrot.position &&
+    characters.hawk.position != characters.walnuts.position) ||
+  (characters.walnuts.position == characters.parrot.position &&
+    characters.parrot.position != characters.hawk.position)
+) {
+  console.log("Perdiste");
+}
 
 /*
   hawk - parrot - walnuts => State 0
@@ -79,3 +109,15 @@ const Boat = {
   parrot - walnuts => State Lost
 
 */
+
+
+// if (Boat.position == 0) {
+//   BoatHtml.style.transform = "translateX(-40vw)";
+//   objPropertyHtml.style.transform = `translateX(${timeSet.go}vw)`;
+// }
+// if (Boat.position == 1) {
+//   BoatHtml.style.transform = "translateX(0.1vw)";
+//   objPropertyHtml.style.transform = `translateX(${timeSet.back}vw)`;
+// }
+// if (Boat.position === 0) Boat.position = 1;
+// else Boat.position = 0;

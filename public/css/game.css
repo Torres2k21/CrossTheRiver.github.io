@@ -84,7 +84,7 @@ header > #pause-game {
 }
 
 #Boat-player {
-  width: 310px;
+  width: 340px;
   transition: all ease-in 0.5s;
 }
 /* #Boat-player :hover {
@@ -95,12 +95,15 @@ header > #pause-game {
 #hawk {
   height: 85px;
   width: 50px;
+  transition: all ease-in 0.5s;
 }
 #parrot {
   height: 80px;
-  width: 100px;
+  width: 105px;
+  transition: all ease-in 0.5s;
 }
 #walnuts {
   height: 80px;
   width: 80px;
+  transition: all ease-in 0.5s;
 }
