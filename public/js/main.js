@@ -42,29 +42,40 @@
 //      [[ Code ]]
 //Initial variables
 let boatPlay = "btn-boat-player";
-// let parrot = "btn-parrot";
-// let hawk = "btn-hawk";
-// let walnuts = "btn-walnuts";
 
 // Objeto Boat
 const Boat = {
+  id: "Boat-player",
+  position: 0,
   capacityMax: 2,
   capacityNow: 1,
   Rancher: true,
   parrot: {
-    id: "btn-parrot",
+    id: "parrot",
+    position: 0,
     state: false,
   },
   hawk: {
-    id: "btn-hawk",
+    id: "hawk",
+    position: 0,
     state: false,
   },
   walnuts: {
-    id: "btn-walnuts",
+    id: "walnuts",
+    position: 0,
     state: false,
   },
 };
 
+// REGLAS DEL JUEGO
+// if(Boat.hawk.position == Boat.parrot.position){
+//   console.log("Perdiste");
+// }
 
-// 
-console.log(Boat.parrot.id)
+/*
+  hawk - parrot - walnuts => State 0
+
+  hawk - parrot => State Lost
+  parrot - walnuts => State Lost
+
+*/
