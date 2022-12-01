@@ -11,7 +11,7 @@ let modalInstrucctions = `
                 comería al loro si están ambos en la misma orilla. El loro se comería
                 las nueces si están ambos en la misma orilla.
             </p>
-            <a id="Btn-modal-instructions" href="/public/html/game.html" class="boton">INICIAR</a>
+            <a id="btn-close" href="/public/html/game.html" class="boton">INICIAR</a>
         </div>
     </section>
 `;
