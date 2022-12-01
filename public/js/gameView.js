@@ -199,7 +199,7 @@ const isError = () => {
     <div class="SubCajamdLost">
       <div class="botones">
         <a href="/public/html/game.html" id="try-again" class="boton">Jugar de Nuevo</a>
-        <a href="/public/html/home.html" id="go-home" class="boton">Página Principal </a>
+        <a href="/public/html/index.html" id="go-home" class="boton">Página Principal </a>
       </div>
     </div>
   </section>
@@ -235,7 +235,7 @@ const isVictory = () => {
         <iconify-icon icon="clarity:star-solid" style="color: #ffc700;position: absolute;
         top: 62%;left: 55%; transform: translate(-50%, -50%);" width="50" height="50"></iconify-icon>
         <div class="text-box">
-           <b><a id="btn-back" href="/public/html/home.html" class="btn btn-animate">Volver</a></b>
+           <b><a id="btn-back" href="/public/html/index.html" class="btn btn-animate">Volver</a></b>
         </div>
     </div>
   `;
