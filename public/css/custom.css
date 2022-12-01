@@ -17,7 +17,7 @@ body {
   position: absolute;
   top: 400px;
   left: 20px;
-  background: #1F1F1F;
+  background: #1f1f1f;
   border-radius: 10px;
   list-style: square;
   padding: 20px;
@@ -49,7 +49,6 @@ body {
   color: rgb(253, 253, 253);
   border-radius: 5px;
   font-weight: bold;
-  position: absolute;
   /*animaciones*/
   border-color: #afb0b2;
   border-radius: 10px;

@@ -1,9 +1,4 @@
 //      [[ GAME ]]
-console.group();
-console.log(`CapacityNow: ${Boat.capacityNow}`);
-console.log(`Position: ${Boat.position}`);
-console.groupEnd();
-
 // btnCounters DELETE BEFORE
 window.onload = Load;
 function Load() {
@@ -199,9 +194,19 @@ const updateBoat = (objProperty) => {
 
 // Si se comete un error
 const isError = () => {
+  let modalLost = `
+  <section class="caja">
+    <div class="SubCajamdLost">
+      <div class="botones">
+        <a href="/public/html/game.html" id="try-again" class="boton">Jugar de Nuevo</a>
+        <a href="/public/html/home.html" id="go-home" class="boton">Página Principal </a>
+      </div>
+    </div>
+  </section>
+`;
   if (
     (characters.walnuts.position == characters.parrot.position &&
-      !characters.hawk.state &&
+      characters.walnuts.state == characters.parrot.state &&
       (characters.walnuts.position != characters.hawk.position ||
         (characters.hawk.state == true &&
           Boat.position != characters.walnuts.position))) ||
@@ -213,11 +218,27 @@ const isError = () => {
   ) {
     console.warn("Perdiste");
     game.stop();
-    // printModal(modalLost);
+    printModal(modalLost);
   }
 };
 
 const isVictory = () => {
+  let modalFinally = `
+    <div class="final">
+        <img class="img4" src="/public/img/bgVictory2.jpg" />
+        <div class="centrado">
+          <h3>Resultado   -    Tiempo</h3>
+          <h2><b>GANADOR     -          0</b></h2>
+        </div>
+        <iconify-icon icon="clarity:star-solid" style="color: #ffc700;position: absolute;
+        top: 62%;left: 50%; transform: translate(-50%, -50%);" width="50" height="50"></iconify-icon>
+        <iconify-icon icon="clarity:star-solid" style="color: #ffc700;position: absolute;
+        top: 62%;left: 55%; transform: translate(-50%, -50%);" width="50" height="50"></iconify-icon>
+        <div class="text-box">
+           <b><a id="btn-back" href="/public/html/home.html" class="btn btn-animate">Volver</a></b>
+        </div>
+    </div>
+  `;
   if (
     characters.parrot.position == 1 &&
     characters.hawk.position == 1 &&
@@ -225,6 +246,7 @@ const isVictory = () => {
   ) {
     console.log("Ganaste");
     game.stop();
+    printModal(modalFinally);
     // printModal(modalFinally);
   }
 };

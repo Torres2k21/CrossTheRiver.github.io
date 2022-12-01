@@ -1,37 +1,39 @@
-body {
-  background-image: url(/public/img/bginstructions.png);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 150px;
-  flex-wrap: wrap;
-  background-repeat: no-repeat;
-}
-body#opacidad {
-  background-color: #131111;
-  height: 645px;
-  opacity: 0.8;
-  opacity: 80%;
+.modal-content {
+  border-radius: 10px;
 }
 .caja {
   background: #d9d9d9;
   padding: 4px;
   border-radius: 20px;
-  width: 430px;
-  height: 380px;
+  width: 480px;
+  height: 480px;
 }
-.SubCaja {
+.SubCajamdLost {
   padding: 15px;
   margin: 3px;
-  background-image: url(/public/img/Fallaste.jpg);
+  background-image: url(/public/img/bgLost.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
   border-radius: 20px;
-  width: 395px;
-  height: 345px;
+  width: 445px;
+  height: 445px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+.texto {
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 8px;
+  font-family: Cascadia Code;
+  font-size: 14.5px;
+}
+
 .botones {
   margin-top: 100px;
   display: flex;
@@ -45,7 +47,7 @@ body#opacidad {
   color: rgb(253, 253, 253);
   border-radius: 5px;
   font-weight: bold;
-  /*animaciones*/
+  /* animaciones */
   border-color: #afb0b2;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
